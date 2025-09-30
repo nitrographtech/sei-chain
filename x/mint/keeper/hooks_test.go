@@ -61,7 +61,7 @@ func TestEndOfEpochMintedCoinDistribution(t *testing.T) {
 			},
 		}
 		mintParams := minttypes.NewParams(
-			"usei",
+			"unos",
 			tokenReleaseSchedle,
 		)
 		seiApp.MintKeeper.SetParams(ctx, mintParams)
