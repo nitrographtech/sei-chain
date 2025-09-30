@@ -46,8 +46,8 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=sei \
-			-X github.com/cosmos/cosmos-sdk/version.ServerName=seid \
+ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=nos \
+			-X github.com/cosmos/cosmos-sdk/version.ServerName=nosd \
 			-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 			-X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 			-X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)"
@@ -100,10 +100,10 @@ lint:
 	go mod verify
 
 build:
-	go build $(BUILD_FLAGS) -o ./build/seid ./cmd/seid
+	go build $(BUILD_FLAGS) -o ./build/nosd ./cmd/seid
 
 build-verbose:
-	go build -x -v $(BUILD_FLAGS) -o ./build/seid ./cmd/seid
+	go build -x -v $(BUILD_FLAGS) -o ./build/nosd ./cmd/seid
 
 build-price-feeder:
 	go build $(BUILD_FLAGS) -o ./build/price-feeder ./oracle/price-feeder
